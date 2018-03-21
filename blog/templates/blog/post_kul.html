@@ -1,0 +1,58 @@
+{% load views %}
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KU Leuven</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//stijl.kuleuven.be/releases/latest/css/main.css">
+  </head>
+  <body>
+    <div class="l-page">
+        <nav class="global-header hidden-print">...</nav>
+        <!--{ include_external 'https://stijl.kuleuven.be/2016/includes/header.en.inc' }-->
+        {% current_time "%Y-%m-%d %I:%M %p" as the_time %}
+        <p>The time is {{ the_time }}.</p>
+        <nav class="local-header">...</nav>
+        <div class="jumbotron ...">...</div> (optional)
+
+        <div role="main">
+             <div class="container">
+
+
+
+			<h1><a href="/">Django Girls Blog</a></h1>
+        
+	        <div>
+	            <p>published: 14.06.2014, 12:14</p>
+	            <h2><a href="">My first post</a></h2>
+	            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	        </div>
+
+	        <div>
+	            <p>published: 14.06.2014, 12:14</p>
+	            <h2><a href="">My second post</a></h2>
+	            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+	        </div>
+
+
+             </div>
+        </div>
+
+        <footer class="local-footer">...</footer>
+        <footer class="global-footer">...</footer>
+    </div>
+    <aside class="flyout-menu" class="flyout ...">...</aside>
+    <!-- Latest compiled and minified JS -->
+    <script src="//stijl.kuleuven.be/releases/latest/js/all.min.js"></script>
+  </body>
+</html>
+
+
+
+
+        
