@@ -1,3 +1,5 @@
+{% load staticfiles %}
+{% load blog_tags %}
 <html>
 <head>
 	<title>Kim's post list</title>
@@ -7,15 +9,13 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
-	<style>
-	.jumbotron {
-		background-image: url('https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-		background-position: 0% 55%;
-		color: #fff;
-	}
-	</style>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
+	<div>
+		{% include_external 'https://stijl.kuleuven.be/2016/includes/header.en.inc' %}
+    </div>
+
 	<div class="jumbotron">
 		<div class="container">
 			<h1>Kim's Django Girls blog</h1>
@@ -25,6 +25,9 @@
 
 	<div class="container">
 		
+		{% current_time "%Y-%m-%d %I:%M %p" as the_time %}
+        <p>The time is {{ the_time }}.</p>
+
 		{% for post in posts %}
     	<div class="panel panel-info">
         	<div class="panel-heading">

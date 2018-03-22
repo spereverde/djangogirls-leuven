@@ -1,21 +1,9 @@
-import datetime
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
 from django import template
 
-register = template.Library()
-
-#@register.simple_tag
-#def include_external(url):
-#	import urllib2
-#	return urllib2.urlopen(url).read()
-
-@register.simple_tag
-def current_time(format_string):
-    return datetime.datetime.now().strftime(format_string)
-
 def post_list(request):
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-	return render(request, 'blog/post_list.html', {'posts': posts})
-	# return render(request, 'blog/post_kul.html', {})
+	# return render(request, 'blog/post_list.html', {'posts': posts})
+	return render(request, 'blog/post_kul.html', {'posts': posts})
