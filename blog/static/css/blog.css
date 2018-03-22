@@ -3,3 +3,12 @@
 	background-position: 0% 55%;
 	color: #fff;
 }
+
+.jumbotron h1 {
+	font-family: 'Lobster';
+}
+
+.panel-heading {
+	font-family: 'Lobster';
+	font-size: 2em;
+}

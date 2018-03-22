@@ -29,18 +29,19 @@
 
 			<h1>KU Leuven posts</h1>
 
+			<div class="row">
 			{% for post in posts %}
-    		<div class="row">
- 			<div class="col-xs-12">
+    		
+ 			<div class="col-xs-12 col-md-4">
     		<div class="card card-gray card-block">
 		        <h2>{{ post.title }}</h2>
        			<p><span class="tag tag-primary">published: {{ post.published_date }}</span></p>
        			<p>{{ post.text|linebreaksbr }}</p>
         	</div>
         	</div>
-        	</div>
-			{% endfor %}
-
+        	{% endfor %}
+			</div>
+			
              </div>
         </div>
 
