@@ -1,11 +1,8 @@
+# import requests
 import datetime
 from django.utils import timezone
 from django import template
-import requests
-from urllib.request import urlopen
 from django.utils.safestring import mark_safe
-from django.utils.html import format_html
-
 
 register = template.Library()
 
