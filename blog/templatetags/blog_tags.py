@@ -9,11 +9,11 @@ from django.utils.html import format_html
 
 register = template.Library()
 
-@register.simple_tag
-def include_external(url):
-	include = requests.get(url)
-	include_safe = mark_safe(include.text)
-	return include_safe
+# @register.simple_tag
+# def include_external(url):
+# 	include = requests.get(url)
+# 	include_safe = mark_safe(include.text)
+# 	return include_safe
 
 @register.simple_tag
 def current_time(format_string):
