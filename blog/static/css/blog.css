@@ -1,7 +1,11 @@
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 2em;
+}
 .jumbotron {
 	background-image: url('https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
 	background-position: 0% 55%;
-	color: #fff;
+color: #fff;
 }
 
 .jumbotron h1, .post h1 {
