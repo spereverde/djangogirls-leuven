@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load blog_tags %}
 <html>
 <head>
 	<title>Kim's post list</title>
@@ -11,6 +10,24 @@
 
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	<style>
+		.jumbotron {
+			background-image: url('https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+			background-position: 0% 55%;
+		color: #fff;
+		}
+
+		.jumbotron h1 {
+			font-family: 'Lobster';
+		}
+
+		.panel-heading {
+			font-family: 'Lobster';
+			font-size: 2em;
+		}
+	</style>
+
 </head>
 <body>
 
@@ -22,9 +39,6 @@
 	</div>
 
 	<div class="container">
-		
-		{% current_time "%Y-%m-%d %I:%M %p" as the_time %}
-        <p>{{ the_time }}.</p>
 
 		{% for post in posts %}
     	<div class="panel panel-info">
