@@ -11,6 +11,12 @@ color: #fff;
 .jumbotron h1, .post h1 {
 	font-family: 'Lobster';
 }
+.jumbotron a {
+	color: #fff;
+}
+.jumbotron a:hover {
+	text-decoration: none;
+}
 
 .panel-heading {
 	font-family: 'Lobster';
