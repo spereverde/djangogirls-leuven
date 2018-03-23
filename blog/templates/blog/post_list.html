@@ -1,57 +1,15 @@
-{% load staticfiles %}
-<html>
-<head>
-	<title>Kim's post list</title>
-	 <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{% extends 'blog/base.html' %}
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-
-	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-	<style>
-		.jumbotron {
-			background-image: url('https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-			background-position: 0% 55%;
-		color: #fff;
-		}
-
-		.jumbotron h1 {
-			font-family: 'Lobster';
-		}
-
-		.panel-heading {
-			font-family: 'Lobster';
-			font-size: 2em;
-		}
-	</style>
-
-</head>
-<body>
-
-	<div class="jumbotron">
-		<div class="container">
-			<h1>Kim's Django Girls blog</h1>
-  			<p>powered by Django and Bootstrap</p>
-  		</div>
+{% block content %}
+	{% for post in posts %}
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+		</div>
+		<div class="panel-body">
+			<p><span class="label label-warning">published: {{ post.published_date }}</span></p>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
 	</div>
-
-	<div class="container">
-
-		{% for post in posts %}
-    	<div class="panel panel-info">
-        	<div class="panel-heading">
-        		<a href="">{{ post.title }}</a>
-        	</div>
-        	<div class="panel-body">
-        		<p><span class="label label-warning">published: {{ post.published_date }}</span></p>
-        		<p>{{ post.text|linebreaksbr }}</p>
-        	</div>
-    	</div>
-		{% endfor %}
-
-</div>
-</body>
-</html>
+	{% endfor %}
+{% endblock %}

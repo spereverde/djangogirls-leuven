@@ -4,7 +4,7 @@
 	color: #fff;
 }
 
-.jumbotron h1 {
+.jumbotron h1, .post h1 {
 	font-family: 'Lobster';
 }
 
